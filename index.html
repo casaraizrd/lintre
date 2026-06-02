@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Casa Raíz RD | Enlaces</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #edf4ec;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: min(100vw, 682px);
+  position: relative;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 18px 60px rgba(0,0,0,.16);
+}
+
+.bg {
+  width: 100%;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hotspot {
+  position: absolute;
+  left: 15.8%;
+  width: 68.8%;
+  height: 7.2%;
+  border-radius: 999px;
+  z-index: 10;
+  display: block;
+  text-indent: -9999px;
+  overflow: visible;
+}
+
+.hotspot::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateX(0) scale(1);
+  background: rgba(255,255,255,.10);
+  box-shadow:
+    0 0 0 2px rgba(101,192,68,.18),
+    0 10px 28px rgba(0,0,0,.12);
+  transition:
+    transform .28s cubic-bezier(.18,.89,.32,1.28),
+    opacity .22s ease,
+    box-shadow .22s ease;
+  pointer-events: none;
+}
+
+.hotspot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  opacity: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0) 0%,
+    rgba(255,255,255,.18) 35%,
+    rgba(255,255,255,.55) 50%,
+    rgba(255,255,255,.14) 65%,
+    rgba(255,255,255,0) 100%
+  );
+  pointer-events: none;
+}
+
+.hotspot:hover::before {
+  opacity: 1;
+  transform: translateX(34px) scale(1.045);
+  box-shadow:
+    -12px 16px 34px rgba(0,0,0,.18),
+    0 0 28px rgba(101,192,68,.40);
+}
+
+.hotspot:hover::after {
+  opacity: 1;
+  animation: shine .75s ease forwards;
+}
+
+.hotspot:active::before {
+  transform: translateX(20px) scale(.99);
+}
+
+@keyframes shine {
+  from {
+    transform: translateX(-120%);
+  }
+  to {
+    transform: translateX(150%);
+  }
+}
+
+.wa-main { top: 27.2%; }
+.ita { top: 35.8%; }
+.catalogo { top: 44.3%; }
+.web { top: 52.8%; }
+.tiktok { top: 61.3%; }
+.threads { top: 69.8%; }
+.correo { top: 78.2%; }
+
+.whatsapp-options {
+  position: absolute;
+  left: 18%;
+  top: 34.5%;
+  width: 64%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all .25s ease;
+  z-index: 40;
+}
+
+.whatsapp-options.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.whatsapp-options a {
+  background: white;
+  color: #267433;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 800;
+  padding: 13px 10px;
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.18);
+  transition: transform .2s ease, background .2s ease;
+}
+
+.whatsapp-options a:hover {
+  transform: translateX(12px) scale(1.03);
+  background: #f6fff3;
+}
+
+@media(max-width:680px) {
+  .container {
+    box-shadow: none;
+  }
+
+  .hotspot:hover::before {
+    transform: translateX(18px) scale(1.025);
+  }
+}
+</style>
+</head>
+
+<body>
+
+<main class="container">
+  <img src="casa-raiz-diseno.jpeg" class="bg" alt="Casa Raíz RD">
+
+  <a href="#" class="hotspot wa-main" id="waBtn">WhatsApp</a>
+
+  <div class="whatsapp-options" id="waOptions">
+    <a target="_blank" rel="noopener" href="https://wa.me/18493738852?text=Hola%20vengo%20desde%20Casa%20Ra%C3%ADz%20RD%20y%20quiero%20informaci%C3%B3n">WhatsApp: +1 849-373-8852</a>
+    <a target="_blank" rel="noopener" href="https://wa.me/18292786677?text=Hola%20vengo%20desde%20Casa%20Ra%C3%ADz%20RD%20y%20quiero%20informaci%C3%B3n">WhatsApp: +1 829-278-6677</a>
+  </div>
+
+  <a class="hotspot ita" target="_blank" rel="noopener" href="https://itaesther.casaraizrd.com">Proyecto ITA Esther 3</a>
+  <a class="hotspot catalogo" target="_blank" rel="noopener" href="https://casaraizrd.com/catalogo">Propiedades disponibles</a>
+  <a class="hotspot web" target="_blank" rel="noopener" href="https://casaraizrd.com/">Página web oficial</a>
+  <a class="hotspot tiktok" target="_blank" rel="noopener" href="https://www.tiktok.com/@casaraizrd">TikTok</a>
+  <a class="hotspot threads" target="_blank" rel="noopener" href="https://www.threads.com/@casaraizrd?igshid=NTc4MTIwNjQ2YQ==">Threads</a>
+  <a class="hotspot correo" href="mailto:ivanalberto@casaraizrd.com,cmerejildo@casaraizrd.com">Correo electrónico</a>
+</main>
+
+<script>
+const waBtn = document.getElementById("waBtn");
+const waOptions = document.getElementById("waOptions");
+
+waBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+  waOptions.classList.toggle("open");
+});
+
+document.addEventListener("click", function(e) {
+  if (!waBtn.contains(e.target) && !waOptions.contains(e.target)) {
+    waOptions.classList.remove("open");
+  }
+});
+</script>
+
+</body>
+</html>
